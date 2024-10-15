@@ -1,2 +1,2 @@
 database:
-  MYSQL_URI: mysql://avnadmin:AVNS_EGF-KZ5sNRkEWIfgwok@mysql-1bc2847a-kim-a0ff.l.aivencloud.com:27878/defaultdb?ssl-mode=REQUIRED
+  MYSQL_URI: ${{secrets.DATABASE_URI}}
