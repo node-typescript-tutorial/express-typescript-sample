@@ -1,5 +1,5 @@
 import { CRUDRepository, ICRUDRepository } from "@utils/repositories";
-import { User } from "src/entities/user";
+import { User } from "@entities/user";
 
 export interface IUserRepository extends ICRUDRepository<User> {}
 export class UserRepository

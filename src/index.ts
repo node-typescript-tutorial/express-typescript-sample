@@ -1,7 +1,6 @@
 import express from "express";
 import { route } from "./route";
 import { Application } from "./app";
-
 const app = new Application()
 const exp = express();
 

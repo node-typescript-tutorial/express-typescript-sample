@@ -1,6 +1,7 @@
-import { UserService } from "@services/user-service";
-import { UserController } from "./controllers/user-controller";
-import { UserRepository } from "@repositories/user-repository";
+import { UserController } from "@controllers/user-controller"
+import { UserRepository } from "@repositories/user-repository"
+import { UserService } from "@services/user-service"
+
 export class Application {
      userController: UserController
     constructor(){
