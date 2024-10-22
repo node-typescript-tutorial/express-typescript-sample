@@ -1,12 +1,15 @@
-import { UserController } from "@controllers/user-controller"
-import { UserRepository } from "@repositories/user-repository"
-import { UserService } from "@services/user-service"
+import { UserController } from "@controllers/user-controller";
+import { UserService } from "@services/user-service";
+import { UserRepository } from "@repositories/user-repository";
+import { MySQLClient } from "@utils/mysql/mysql-client";
+import { userModel } from "@entities/user";
+import { validate } from "./utils/model-validator";
 
 export class Application {
-     userController: UserController
-    constructor(){
-        const userRepo = new UserRepository("user")
-        const userService = new UserService(userRepo) 
-        this.userController = new UserController(userService)
-    }
+  userController: UserController;
+  constructor(dbClient: MySQLClient) {
+    const userRepo = new UserRepository("users", dbClient, userModel);
+    const userService = new UserService(userRepo, validate);
+    this.userController = new UserController(userService);
+  }
 }

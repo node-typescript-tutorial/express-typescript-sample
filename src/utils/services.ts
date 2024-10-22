@@ -1,9 +1,11 @@
+import { ModelProp } from "./model-validator/model";
+
 export interface ICRUDService<T> {
 
 }
 
 export class CRUDService<T> implements ICRUDService<T> {
-    constructor(){
+    constructor(model: ModelProp){
         
     }
 } 

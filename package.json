@@ -15,11 +15,13 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "js-yaml": "^4.1.0",
-    "mysql": "^2.18.1",
+    "mysql2": "^3.11.3",
     "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/mysql": "^2.15.26",
     "@types/node": "^22.7.5",
     "concurrently": "^9.0.1",
     "nodemon": "^3.1.7",
