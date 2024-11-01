@@ -17,10 +17,9 @@ export function validate(model: Model, obj: Record<string, any>, notValidateRequ
   const keys = Object.keys(model);
   keys.forEach((element) => {
     const p = model[element];
-    if(p.required && isUnrequiredMethod){
-
-    }
-    if (
+    if(p.required && notValidateRequired){
+      //continue
+    } else if (
       p.required &&
       (obj[element] == undefined ||
         (p.type === "string" &&
