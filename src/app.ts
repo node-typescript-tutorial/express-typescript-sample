@@ -9,7 +9,7 @@ export class Application {
   userController: UserController;
   constructor(dbClient: MySQLClient) {
     const userRepo = new UserRepository("users", dbClient, userModel);
-    const userService = new UserService(userRepo, validate);
+    const userService = new UserService(userRepo, userModel, validate);
     this.userController = new UserController(userService);
   }
 }

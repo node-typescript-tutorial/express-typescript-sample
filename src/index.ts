@@ -7,7 +7,7 @@ import { readFileSync } from "fs";
 import { Config } from "./config";
 import { MySQLClient } from "./utils/mysql/mysql-client";
 
-const config = yaml.load(readFileSync("../config.yml", "utf8")) as Config;
+const config = yaml.load(readFileSync("./config.yml", "utf8")) as Config;
 
 const pool = mysql.createPool({
   uri: config.database.MYSQL_URI,
